@@ -16,16 +16,18 @@ app.use(cors({
 app.use(express.json());
 db;
 
+app.get("/",(req,res)=>{
+  res.send("server is running");
+});
+
 app.use("/user", userRoute);
 app.use("/chat", chatRoute);
 app.use(notFound);
 app.use(errorHandler);
 
-app.get("/",(req,res)=>{
-  res.json({"msg":"server is running"});
-});
-
 app.listen(port, () => {
   console.log(`App is running on the Port ${port}`);
 });
+
+module.exports = app
 

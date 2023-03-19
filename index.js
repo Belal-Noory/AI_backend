@@ -21,6 +21,10 @@ app.use("/chat", chatRoute);
 app.use(notFound);
 app.use(errorHandler);
 
+app.get("/",(req,res)=>{
+  res.json({"msg":"server is running"});
+});
+
 app.listen(port, () => {
   console.log(`App is running on the Port ${port}`);
 });

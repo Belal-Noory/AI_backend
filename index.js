@@ -1,10 +1,10 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import userRoute from "../routes/userRoute.js";
-import chatRoute from "../routes/chatRoute.js";
-import db from "../db/db.js";
-import { errorHandler, notFound } from "../middleware/error.js";
+import userRoute from "./routes/userRoute.js";
+import chatRoute from "./routes/chatRoute.js";
+import db from "./db/db.js";
+import { errorHandler, notFound } from "./middleware/error.js";
 
 dotenv.config();
 const app = express();
